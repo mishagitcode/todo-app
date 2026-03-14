@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Tag(models.Model):
@@ -9,6 +10,9 @@ class Tag(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+    def get_absolute_url(self):
+        return reverse("todo:tag-list")
 
 
 class Task(models.Model):
@@ -23,3 +27,6 @@ class Task(models.Model):
 
     def __str__(self) -> str:
         return self.content[:50]
+
+    def get_absolute_url(self):
+        return reverse("todo:task-list")
