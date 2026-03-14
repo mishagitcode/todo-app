@@ -3,7 +3,7 @@
 {% block content %}
 <div class="d-flex justify-content-between align-items-start mb-4">
   <h1 class="display-2 fw-bold">TODO list</h1>
-  <a href="{% url 'todo:task-create' %}" class="btn btn-primary btn-lg">Add task</a>
+  <a href="{% url 'app:task-create' %}" class="btn btn-primary btn-lg">Add task</a>
 </div>
 
 {% for task in task_list %}
@@ -34,16 +34,16 @@
         {% empty %}
           -
         {% endfor %}
-        <a href="{% url 'todo:task-update' task.pk %}" class="ms-2">Update</a>
-        <a href="{% url 'todo:task-delete' task.pk %}">Delete</a>
+        <a href="{% url 'app:task-update' task.pk %}" class="ms-2">Update</a>
+        <a href="{% url 'app:task-delete' task.pk %}">Delete</a>
       </div>
     </div>
 
     <div class="ms-4">
       {% if task.is_done %}
-        <a href="{% url 'todo:task-toggle' task.pk %}" class="btn btn-secondary btn-lg">Undo</a>
+        <a href="{% url 'app:task-toggle' task.pk %}" class="btn btn-secondary btn-lg">Undo</a>
       {% else %}
-        <a href="{% url 'todo:task-toggle' task.pk %}" class="btn btn-success btn-lg">Complete</a>
+        <a href="{% url 'app:task-toggle' task.pk %}" class="btn btn-success btn-lg">Complete</a>
       {% endif %}
     </div>
   </div>

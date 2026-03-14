@@ -3,7 +3,7 @@
 {% block content %}
 <div class="d-flex justify-content-between align-items-start mb-4">
   <h1 class="display-2 fw-bold">Tags</h1>
-  <a href="{% url 'todo:tag-create' %}" class="btn btn-primary btn-lg">Add</a>
+  <a href="{% url 'app:tag-create' %}" class="btn btn-primary btn-lg">Add</a>
 </div>
 
 <table class="table align-middle">
@@ -19,10 +19,10 @@
       <tr style="font-size: 22px;">
         <td>{{ tag.name }}</td>
         <td>
-          <a href="{% url 'todo:tag-update' tag.pk %}" class="btn btn-secondary btn-lg">Update</a>
+          <a href="{% url 'app:tag-update' tag.pk %}" class="btn btn-secondary btn-lg">Update</a>
         </td>
         <td>
-          <a href="{% url 'todo:tag-delete' tag.pk %}" class="btn btn-secondary btn-lg">Delete</a>
+          <a href="{% url 'app:tag-delete' tag.pk %}" class="btn btn-secondary btn-lg">Delete</a>
         </td>
       </tr>
     {% empty %}

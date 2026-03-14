@@ -12,7 +12,7 @@ class Tag(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("todo:tag-list")
+        return reverse("app:tag-list")
 
 
 class Task(models.Model):
@@ -29,4 +29,4 @@ class Task(models.Model):
         return self.content[:50]
 
     def get_absolute_url(self):
-        return reverse("todo:task-list")
+        return reverse("app:task-list")
