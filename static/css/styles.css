@@ -1,0 +1,39 @@
+body {
+  padding-top: 24px;
+}
+
+.sidebar-card a {
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  padding: 18px 22px;
+}
+
+.task-title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.status-done {
+  color: green;
+  font-weight: 700;
+}
+
+.status-not-done {
+  color: red;
+  font-weight: 700;
+}
+
+.meta-text {
+  font-size: 18px;
+  color: #333;
+}
+
+.tags-text {
+  font-size: 22px;
+  color: gray;
+}
+
+.task-divider {
+  margin: 24px 0;
+}
